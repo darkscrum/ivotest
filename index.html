@@ -230,5 +230,18 @@
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
 
+		<script>
+			var engagementRequest = salemove.requestEngagement('text');
+
+  engagementRequest.engagementPromise.then(function(engagement) {
+    var enableRecordEvent = function(engagement) {
+      var someButton = document.querySelector('Signup');
+
+      someButton.addEventListener('click', function() {
+        engagement.recordEvent({message: 'Record visitor event'});
+      });
+    };
+  });
+</script>
 	</body>
 </html>
