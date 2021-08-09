@@ -10,9 +10,9 @@ function myFunction() {
   document.getElementById("demo").innerHTML = "Hello World";
 }
 </script>
-<button onclick="engagementRequest()">someButton</button>
+
 <script>
-var engagementRequest = sm.requestEngagement('text');
+var engagementRequest = salemove.requestEngagement('text');
 
   engagementRequest.engagementPromise.then(function(engagement) {
     var enableRecordEvent = function(engagement) {
@@ -24,3 +24,4 @@ var engagementRequest = sm.requestEngagement('text');
     };
   });
 </script>
+<button onclick="engagementRequest()">someButton</button>
