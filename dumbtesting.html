@@ -1,4 +1,6 @@
-<button onclick="myFunction()">Click me</button>
+
+<script async src="https://api.beta.glia.com/salemove_integration.js"></script>
+button onclick="myFunction()">Click me</button>
 
 <p id="demo"></p>
 
@@ -7,3 +9,15 @@ function myFunction() {
   document.getElementById("demo").innerHTML = "Hello World";
 }
 </script>
+
+var engagementRequest = salemove.requestEngagement('text');
+
+  engagementRequest.engagementPromise.then(function(engagement) {
+    var enableRecordEvent = function(engagement) {
+      var someButton = document.querySelector('#record-event-button');
+
+      someButton.addEventListener('click', function() {
+        engagement.recordEvent({message: 'Record visitor event'});
+      });
+    };
+  });
