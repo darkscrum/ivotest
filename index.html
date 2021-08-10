@@ -12,6 +12,19 @@
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
 		<script async src="https://api.beta.glia.com/salemove_integration.js"></script>
+		<script>
+			var engagementRequest = salemove.requestEngagement('text');
+
+  engagementRequest.engagementPromise.then(function(engagement) {
+    var enableRecordEvent = function(engagement) {
+      var someButton = document.querySelector('Signup');
+
+      someButton.addEventListener('click', function() {
+        engagement.recordEvent({message: 'Record visitor event'});
+      });
+    };
+  });
+</script>
 	</head>
 	<body class="is-preload">
 
@@ -230,18 +243,6 @@
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
 
-		<script>
-			var engagementRequest = salemove.requestEngagement('text');
 
-  engagementRequest.engagementPromise.then(function(engagement) {
-    var enableRecordEvent = function(engagement) {
-      var someButton = document.querySelector('Signup');
-
-      someButton.addEventListener('click', function() {
-        engagement.recordEvent({message: 'Record visitor event'});
-      });
-    };
-  });
-</script>
 	</body>
 </html>
