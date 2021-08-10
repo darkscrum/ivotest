@@ -12,6 +12,12 @@ alert('Hello world')
 }
 </script>
 
+<script></script>
+sm.getApi({version: 'v1'}).then(glia => {
+    glia.visitorApp.showVisitorCode();
+  });
+</script>
+
 <script>
 var engagementRequest = salemove.requestEngagement('text');
 
