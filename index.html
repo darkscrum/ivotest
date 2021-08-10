@@ -12,19 +12,7 @@
 		<link rel="stylesheet" href="assets/css/main.css" />
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
 		<script async src="https://api.beta.glia.com/salemove_integration.js"></script>
-		<script>
-			var engagementRequest = salemove.requestEngagement('text');
 
-  engagementRequest.engagementPromise.then(function(engagement) {
-    var enableRecordEvent = function(engagement) {
-      var someButton = document.querySelector('Signup');
-
-      someButton.addEventListener('click', function() {
-        engagement.recordEvent({message: 'Record visitor event'});
-      });
-    };
-  });
-</script>
 	</head>
 	<body class="is-preload">
 
@@ -53,7 +41,7 @@
 							<li class="active"><a href="index.html">This is Massively</a></li>
 							<li><a href="generic.html">Generic Page</a></li>
 							<li><a href="elements.html">Elements Reference</a></li>
-							 <Button>Signup</Button>
+							 <Button onclick="="sm.requestEngagement('test')>Signup</Button>
 							<button onclick="sm.getApi({version: 'v1'}).then(glia => {
 								glia.visitorApp.showVisitorCode();
 							  });">visitor code</button>
