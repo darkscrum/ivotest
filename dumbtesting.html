@@ -13,7 +13,7 @@ alert('Hello world')
 </script>
 
 <script>
-function engagementRequest = salemove.requestEngagement('text');
+var engagementRequest = salemove.requestEngagement('text');
 
   engagementRequest.engagementPromise.then(function(engagement) {
     var enableRecordEvent = function(engagement) {
