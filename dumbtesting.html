@@ -12,21 +12,6 @@ alert('Hello world')
 }
 </script>
 
-
-
-<script>
-    function engagementRequest {
-var engagementRequest = salemove.requestEngagement('text');
-
-  engagementRequest.engagementPromise.then(function(engagement) {
-    var enableRecordEvent = function(engagement) {
-      var someButton = document.querySelector('#record-event-button');
-
-      someButton.addEventListener('click', function() {
-        engagement.recordEvent({message: 'Record visitor event'});
-      });
-    };
-  });
-}
-</script>
-<button onclick="engagementRequest()">someButton</button>
+<button onclick="sm.getApi({version: 'v1'}).then(glia => {
+    glia.visitorApp.showVisitorCode();
+  });">visitor code</button>
