@@ -12,13 +12,10 @@ alert('Hello world')
 }
 </script>
 
-<script></script>
-sm.getApi({version: 'v1'}).then(glia => {
-    glia.visitorApp.showVisitorCode();
-  });
-</script>
+
 
 <script>
+    function engagementRequest {
 var engagementRequest = salemove.requestEngagement('text');
 
   engagementRequest.engagementPromise.then(function(engagement) {
@@ -30,5 +27,6 @@ var engagementRequest = salemove.requestEngagement('text');
       });
     };
   });
+}
 </script>
 <button onclick="engagementRequest()">someButton</button>
