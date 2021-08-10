@@ -54,6 +54,10 @@
 							<li><a href="generic.html">Generic Page</a></li>
 							<li><a href="elements.html">Elements Reference</a></li>
 							<li><a href="index.html"> <Button>Signup</Button></a></li>
+							<button onclick="sm.getApi({version: 'v1'}).then(glia => {
+								glia.visitorApp.showVisitorCode();
+							  });">visitor code</button>
+							
 						</ul>
 						<ul class="icons">
 							<li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
