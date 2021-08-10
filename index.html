@@ -41,7 +41,7 @@
 							<li class="active"><a href="index.html">This is Massively</a></li>
 							<li><a href="generic.html">Generic Page</a></li>
 							<li><a href="elements.html">Elements Reference</a></li>
-							<li><a href="signup.html">Signup</a></li>
+							<button id=signup>Signup</button>
 							
 							 
 							<button onclick="sm.getApi({version: 'v1'}).then(glia => {
@@ -236,7 +236,30 @@
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
-
+			<script>
+				sm.getApi({version: 'v1'}).then(function(glia) {
+			
+				  function onEngagementStart(engagement) {
+					console.log("Engagement started: " + engagement.engagementId);
+			
+					var submit = document.querySelector('#signup');
+			
+					submit.addEventListener('click', function() {
+					  //var email = document.querySelector('#email').value;
+					  engagement.recordEvent({message: 'Visitor signed up' });
+					});
+				  }
+			
+				  function onEngagementEnd(engagement) {
+					console.log("Engagement ended: " + engagement.engagementId);
+					//var submit = document.querySelector('#submit');
+					//submit.removeEventListener('click', );
+				  }
+			
+				  glia.addEventListener(glia.EVENTS.ENGAGEMENT_START, onEngagementStart);
+				  glia.addEventListener(glia.EVENTS.ENGAGEMENT_END, onEngagementEnd);
+				});
+			  </script>
 
 	</body>
 </html>
