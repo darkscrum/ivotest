@@ -250,10 +250,13 @@
 					  engagement.recordEvent({message: 'Visitor signed up' });
 					});
 				  }
-				
+				  function onEngagementEnd(engagement) {
+                console.log("Engagement ended: " + engagement.engagementId);
+                 
+                  }
 				
 				  glia.addEventListener(glia.EVENTS.ENGAGEMENT_START, onEngagementStart);
-				  //glia.addEventListener(glia.EVENTS.ENGAGEMENT_END, onEngagementEnd);
+				  glia.addEventListener(glia.EVENTS.ENGAGEMENT_END, onEngagementEnd);
 				});
 			  </script>
 
