@@ -35,13 +35,15 @@ fetch('https://extreme-ip-lookup.com/json/')
  .catch((data, status) => {
     console.log('Request failed');
  })
+</script>
 
+<script>
     
 sm.getApi({version: 'v1'}).then(function(glia) {
   glia.updateInformation({
     customAttributesUpdateMethod: 'merge',
     customAttributes: {
-      riik: asukoht
+      riik: (asukoht)
       
     }
   })
