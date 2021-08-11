@@ -22,11 +22,13 @@ fetch('https://extreme-ip-lookup.com/json/')
 .then(response => {
     console.log("Country: ", response.country);
     var country =response.country;
+    var asukoht='Other'
+    
     if (country == 'Estonia') {
-        alert("hurray")
+        asukoht='Estonia'
         
     }
-    alert('hello, you are from ' + country)
+    console.log(asukoht)
  })
  .catch((data, status) => {
     console.log('Request failed');
@@ -39,9 +41,9 @@ sm.getApi({version: 'v1'}).then(function(glia) {
     customAttributesUpdateMethod: 'merge',
     customAttributes: {
       vip: 'true'
-     
     }
-
+  })
+});
 </script>
 
 
