@@ -18,12 +18,13 @@ alert('Hello world')
   });">visitor code</button>
 
 <script>
+var asukoht='Other'
 fetch('https://extreme-ip-lookup.com/json/')
 .then( res => res.json())
 .then(response => {
     console.log("Country: ", response.country);
     var country =response.country;
-    var asukoht='Other'
+    
     
     if (country == 'Estonia') {
         asukoht='Estonia'
@@ -43,7 +44,7 @@ sm.getApi({version: 'v1'}).then(function(glia) {
   glia.updateInformation({
     customAttributesUpdateMethod: 'merge',
     customAttributes: {
-      riik: (asukoht)
+      riik: asukoht
       
     }
   })
