@@ -22,10 +22,22 @@ fetch('https://extreme-ip-lookup.com/json/')
 .then(response => {
     console.log("Country: ", response.country);
     var country =response.country;
-    alert('hello, you are from' + country)
+    alert('hello, you are from ' + country)
  })
  .catch((data, status) => {
     console.log('Request failed');
  })
 </script>
-alert('hello, you are from' + country)
+
+<script>
+sm.getApi({version: 'v1'}).then(function(glia) {
+  glia.updateInformation({
+    customAttributesUpdateMethod: 'merge',
+    customAttributes: {
+      vip: 'true'
+      console.log(glia.customAttributes)
+    }
+
+</script>
+
+
