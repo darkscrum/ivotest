@@ -1,5 +1,6 @@
 
 <script async src="https://api.beta.glia.com/salemove_integration.js"></script>
+<script src="//api.salemove.com/salemove_integration.js"></script>
 
 <button onclick="myFunction()">Click me</button>
 
@@ -36,6 +37,7 @@ fetch('https://extreme-ip-lookup.com/json/')
 </script>
 
 <script>
+    
 sm.getApi({version: 'v1'}).then(function(glia) {
   glia.updateInformation({
     customAttributesUpdateMethod: 'merge',
