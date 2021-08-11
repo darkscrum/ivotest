@@ -15,3 +15,14 @@ alert('Hello world')
 <button onclick="sm.getApi({version: 'v1'}).then(glia => {
     glia.visitorApp.showVisitorCode();
   });">visitor code</button>
+
+<script>
+fetch('https://extreme-ip-lookup.com/json/')
+.then( res => res.json())
+.then(response => {
+    console.log("Country: ", response.country);
+ })
+ .catch((data, status) => {
+    console.log('Request failed');
+ })
+</script>
