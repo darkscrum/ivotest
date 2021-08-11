@@ -30,6 +30,7 @@ fetch('https://extreme-ip-lookup.com/json/')
         
     }
     console.log(asukoht)
+  
  })
  .catch((data, status) => {
     console.log('Request failed');
@@ -46,6 +47,13 @@ sm.getApi({version: 'v1'}).then(function(glia) {
     }
   })
 });
+
+</script>
+
+<script>
+    sm.getApi({version: 'v1'}).then(function(glia) {
+    console.log('This visitor ID is ' + glia.getVisitorId())
+  });
 </script>
 
 
