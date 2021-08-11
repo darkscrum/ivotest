@@ -21,8 +21,11 @@ fetch('https://extreme-ip-lookup.com/json/')
 .then( res => res.json())
 .then(response => {
     console.log("Country: ", response.country);
+    var country =response.country;
+    alert('hello, you are from' + country)
  })
  .catch((data, status) => {
     console.log('Request failed');
  })
 </script>
+alert('hello, you are from' + country)
