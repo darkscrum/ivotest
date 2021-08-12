@@ -290,14 +290,27 @@
 		customAttributesUpdateMethod: 'merge',
 		customAttributes: {
 		  riik: asukoht
-		  visitor-external-id: TestID
+			
 		  
 		}
 	  })
 	});
 	
 	</script>
-	
+		<script>
+		
+			sm.getApi({version: 'v1'}).then(function(glia) {
+			  glia.updateInformation({
+				customAttributesUpdateMethod: 'merge',
+				customAttributes: {
+				 
+				 
+				  
+				}
+			  })
+			});
+			
+			</script>
 	<script>
 		sm.getApi({version: 'v1'}).then(function(glia) {
 		console.log('This visitor ID is ' + glia.getVisitorId())
