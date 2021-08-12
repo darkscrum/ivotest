@@ -260,5 +260,46 @@
 				});
 			  </script>
 
+<script>
+	var asukoht='Other'
+	fetch('https://extreme-ip-lookup.com/json/')
+	.then( res => res.json())
+	.then(response => {
+		console.log("Country: ", response.country);
+		var country =response.country;
+		
+		
+		if (country == 'Estonia') {
+			asukoht='Estonia'
+			
+		}
+		console.log(asukoht)
+	  
+	 })
+	 .catch((data, status) => {
+		console.log('Request failed');
+	 })
+	</script>
+	
+	<script>
+		
+	sm.getApi({version: 'v1'}).then(function(glia) {
+	  glia.updateInformation({
+		customAttributesUpdateMethod: 'merge',
+		customAttributes: {
+		  riik: asukoht
+		  
+		}
+	  })
+	});
+	
+	</script>
+	
+	<script>
+		sm.getApi({version: 'v1'}).then(function(glia) {
+		console.log('This visitor ID is ' + glia.getVisitorId())
+	  });
+	</script>
+	
 	</body>
 </html>
