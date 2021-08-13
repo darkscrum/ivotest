@@ -265,6 +265,7 @@
 <script>
 	var asukoht='Other'
 
+
 	fetch('https://extreme-ip-lookup.com/json/')
 	.then( res => res.json())
 	.then(response => {
@@ -290,7 +291,8 @@
 	  glia.updateInformation({
 		customAttributesUpdateMethod: 'merge',
 		customAttributes: {
-		  riik: asukoht
+		  riik: asukoht,
+		 "visitor-external-id": visitor-external-id
 	
 		
 		  
