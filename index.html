@@ -66,7 +66,10 @@
 					<div id="main">
 
 						<!-- Featured Post -->
-							<article class="post featured">
+						<div class='sm_cobrowsing_hidden_field'>
+							
+						 	
+						<article class="post featured">
 								<header class="major">
 									<span class="date">April 25, 2017</span>
 									<h2><a href="#">And this is a<br />
@@ -80,6 +83,7 @@
 									<li><a href="#" class="button large">Full Story</a></li>
 								</ul>
 							</article>
+						</div>
 
 						<!-- Posts -->
 							<section class="posts">
@@ -291,9 +295,10 @@
 	sm.getApi({version: 'v1'}).then(function(glia) {
 	  glia.updateInformation({
 		customAttributesUpdateMethod: 'merge',
+		externalId: 'blaah2'
 		customAttributes: {
-		  riik: asukoht,
-		 "visitor-external-id": blaah
+		  riik: asukoht
+		
 	
 		
 		  
