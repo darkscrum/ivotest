@@ -243,70 +243,7 @@
 			<script src="assets/js/breakpoints.min.js"></script>
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
-			<script>
-				sm.getApi({version: 'v1'}).then(function(glia) {
 			
-				  function onEngagementStart(engagement) {
-					console.log("Engagement started: " + engagement.engagementId);
-			
-					var submit = document.querySelector('#signup');
-			
-					submit.addEventListener('click', function() {
-				
-					  engagement.recordEvent({message: 'Visitor signed up' });
-					});
-				  }
-				  function onEngagementEnd(engagement) {
-                console.log("Engagement ended: " + engagement.engagementId);
-                 
-                  }
-				
-				  glia.addEventListener(glia.EVENTS.ENGAGEMENT_START, onEngagementStart);
-				  glia.addEventListener(glia.EVENTS.ENGAGEMENT_END, onEngagementEnd);
-				});
-			  </script>
-
-<script>
-	var asukoht='Other'
-	var blaah ='blaah'
-
-
-	fetch('https://extreme-ip-lookup.com/json/')
-	.then( res => res.json())
-	.then(response => {
-		console.log("Country: ", response.country);
-		var country =response.country;
-		
-		
-		if (country == 'Estonia') {
-			asukoht='Estonia'
-			
-		}
-		console.log(asukoht)
-	  
-	 })
-	 .catch((data, status) => {
-		console.log('Request failed');
-	 })
-	</script>
-	
-	<script>
-		
-	sm.getApi({version: 'v1'}).then(function(glia) {
-	  glia.updateInformation({
-		customAttributesUpdateMethod: 'merge',
-		externalId: 'blaah2'
-		customAttributes: {
-		  riik: asukoht
-		
-	
-		
-		  
-		}
-	  })
-	});
-	
-	</script>
 		
 	<script>
 		sm.getApi({version: 'v1'}).then(function(glia) {
