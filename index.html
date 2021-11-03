@@ -13,7 +13,24 @@
 		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
 		<script async src="https://api.beta.glia.com/salemove_integration.js"></script>
 		<p id="visitor-external-id">some dude</p>
+		<script>
 		
+			sm.getApi({version: 'v1'}).then(function(glia) {
+			  glia.updateInformation({
+				customAttributesUpdateMethod: 'merge',
+				
+				customAttributes: {
+				  AccountNo: "EE60220000123456789",
+				  Registered_Address: "Kase 1 (Oks 2), 50245, Estonia"
+				
+			
+				
+				  
+				}
+			  })
+			});
+			
+			</script>
 
 	</head>
 	<body class="is-preload">
@@ -243,24 +260,7 @@
 			<script src="assets/js/util.js"></script>
 			<script src="assets/js/main.js"></script>
 			
-			<script>
-		
-				sm.getApi({version: 'v1'}).then(function(glia) {
-				  glia.updateInformation({
-					customAttributesUpdateMethod: 'merge',
-					
-					customAttributes: {
-					  AccountNo: "EE60220000123456789",
-					  Registered_Address: "Kase 1 (Oks 2), 50245, Estonia"
-					
-				
-					
-					  
-					}
-				  })
-				});
-				
-				</script>
+			
 
 	
 
